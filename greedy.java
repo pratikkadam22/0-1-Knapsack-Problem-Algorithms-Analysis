@@ -7,9 +7,9 @@ public class greedy
     // Time complexity O(n log n) 
     public static void main(String[] args) 
     { 
-        int[] wt = {10, 20, 30}; 
-        int[] val = {60, 100, 120}; 
-        int capacity = 50; 
+        int val[] = new int[] { 10, 10, 12, 18, 25, 9, 45 }; 
+        int wt[] = new int[] { 2, 4, 6, 9, 5, 7, 3 }; 
+        int capacity = 15; 
   
         double maxValue = getMaxValue(wt, val, capacity); 
         System.out.println("Maximum value we can obtain = " +  

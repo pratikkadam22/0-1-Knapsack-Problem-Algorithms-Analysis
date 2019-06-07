@@ -30,9 +30,9 @@ class dynamic {
     // Driver program to test above function 
     public static void main(String args[]) 
     { 
-        int val[] = new int[] { 60, 100, 120 }; 
-        int wt[] = new int[] { 10, 20, 30 }; 
-        int W = 50; 
+        int val[] = new int[] { 10, 10, 12, 18, 25, 9, 45 }; 
+        int wt[] = new int[] { 2, 4, 6, 9, 5, 7, 3 }; 
+        int W = 30; 
         int n = val.length; 
         System.out.println(knapSack(W, wt, val, n)); 
     } 
