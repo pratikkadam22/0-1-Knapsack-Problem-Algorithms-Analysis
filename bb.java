@@ -8,7 +8,7 @@ class node{
     int bound;
 }
 
-public class KnapsackBB{
+public class bb{
         public static void main(String args[])throws Exception{
                 int maxProfit;
                 int N;
@@ -19,7 +19,7 @@ public class KnapsackBB{
 
                 int Vl[] = new int[] { 10, 10, 12, 18, 25, 9, 45 }; 
                 int Wt[] = new int[] { 2, 4, 6, 9, 5, 7, 3 }; 
-				W = 30; 
+				W = 15; 
                 N = Vl.length; 
                 
                 maxVal = knapsack(N, Vl, Wt, W);

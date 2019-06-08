@@ -71,7 +71,7 @@ public class greedy
             this.wt = wt; 
             this.val = val; 
             this.ind = ind; 
-            cost = new Double(val/wt ); 
+            cost = new Double(val/wt); 
         } 
     } 
 } 
