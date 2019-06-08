@@ -17,9 +17,9 @@ public class bb{
 
                 Scanner input = new Scanner(System.in);
 
-                int Vl[] = new int[] { 10, 10, 12, 18, 25, 9, 45 }; 
-                int Wt[] = new int[] { 2, 4, 6, 9, 5, 7, 3 }; 
-				W = 15; 
+                int Vl[] = new int[] { 51, 85, 102, 102, 33, 99, 136, 40, 95, 187, 99, 2, 163 }; 
+                int Wt[] = new int[] { 23, 110, 186, 124, 162, 82, 126, 112, 147, 171, 123, 20, 10 }; 
+				W = 500; 
                 N = Vl.length; 
                 
                 maxVal = knapsack(N, Vl, Wt, W);

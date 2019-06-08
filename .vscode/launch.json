@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - randomarray",
+            "request": "launch",
+            "mainClass": "randomarray",
+            "projectName": "0-1-Knapsack-Problem-Algorithms-Analysis_5abaa845"
+        }
+    ]
+}

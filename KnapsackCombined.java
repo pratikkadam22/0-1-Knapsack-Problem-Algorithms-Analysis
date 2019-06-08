@@ -15,23 +15,22 @@ public class KnapsackCombined {
         int W;
         int maxVal;
 
-        Scanner input = new Scanner(System.in);
-
-        int Vl[] = new int[] { 60, 100, 120 };
-        int Wt[] = new int[] { 10, 20, 30 };
-        W = 50;
+        int Vl[] = new int[] { 10, 12, 12, 18, 12, 12, 18, 12 };
+        int Wt[] = new int[] { 2, 4, 6, 9, 4, 6, 9, 4 };
+        W = 10;
         N = Vl.length;
 
         maxVal = bb(N, Vl, Wt, W);
         System.out.println("Branch and Bound = " + maxVal);
 
-        double maxValue = getMaxValue(Wt, Vl, W); 
+        double maxValue = greedy(Wt, Vl, W); 
         System.out.println("Greedy Approach = " +  
                             maxValue); 
         
-        System.out.println("Dynamic Programming = " + knapSack(W, Wt, Vl, N));
+        System.out.println("Dynamic Programming = " + dynamic(W, Wt, Vl, N));
     }
 
+    // BRANCH AND BOUND CODE
     public static int bound(node u, int n, int W, int[] pVa, int[] wVa) {
         int j = 0, k = 0;
         int totweight = 0;
@@ -120,8 +119,8 @@ public class KnapsackCombined {
         return maxProfit;
     }
 
-    // function to get maximum value
-    private static double getMaxValue(int[] wt, int[] val, int capacity) {
+    // GREEDY APPROACH CODE
+    private static double greedy(int[] wt, int[] val, int capacity) {
         ItemValue[] iVal = new ItemValue[wt.length];
 
         for (int i = 0; i < wt.length; i++) {
@@ -144,13 +143,11 @@ public class KnapsackCombined {
             int curVal = (int) i.val;
 
             if (capacity - curWt >= 0) {
-                // this weight can be picked while
                 capacity = capacity - curWt;
                 totalValue += curVal;
 
             }
         }
-
         return totalValue;
     }
 
@@ -168,13 +165,12 @@ public class KnapsackCombined {
         }
     }
 
-    // A utility function that returns maximum of two integers 
+    // DYNAMIC PROGRAMMING CODE 
     static int max(int a, int b)  
         { return (a > b) ? a : b; } 
   
-    // Returns the maximum value that can be put in a knapsack 
-    // of capacity W 
-    static int knapSack(int W, int wt[], int val[], int n) 
+    // Returns the maximum value that can be put in a knapsack of capacity W 
+    static int dynamic(int W, int wt[], int val[], int n) 
     { 
         int i, w; 
         int K[][] = new int[n + 1][W + 1]; 
